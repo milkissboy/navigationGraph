@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_main"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.hyk.navigationGrape.ui.main.MainFragment"
+        android:label="main"
+        tools:layout="@layout/fragment_main">
+
+        <!--<action
+            android:id="@+id/action_login_to_use"
+            app:destination="@id/useFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />-->
+
+        <action
+            android:id="@+id/action_profile_to_sub_2"
+            app:destination="@id/profileSubFragment2"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/mainFragment"
+            app:popUpToInclusive="false" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/profileSubFragment2"
+        android:name="com.hyk.navigationGrape.ui.tab.profile.ProfileSubFragment2"
+        android:label="profileSub2"
+        tools:layout="@layout/fragment_main_profile_sub2"/>
+
+
+</navigation>

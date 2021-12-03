@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_login"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.hyk.navigationGrape.ui.login.LoginFragment"
+        android:label="login"
+        tools:layout="@layout/fragment_login">
+
+        <action
+            android:id="@+id/action_login_to_use"
+            app:destination="@id/useFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/useFragment"
+        android:name="com.hyk.navigationGrape.ui.login.UseFragment"
+        android:label="use"
+        tools:layout="@layout/fragment_use">
+
+        <action
+            android:id="@+id/action_use_to_instar"
+            app:destination="@id/useInstarFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/useInstarFragment"
+        android:name="com.hyk.navigationGrape.ui.login.UseInstarFragment"
+        android:label="use"
+        tools:layout="@layout/fragment_use_instar">
+
+        <action
+            android:id="@+id/action_useInstar_to_main"
+            app:destination="@id/nav_graph_main"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out"
+            app:popUpTo="@id/useInstarFragment"
+            app:popUpToInclusive="true"/>
+
+    </fragment>
+
+</navigation>

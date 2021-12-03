@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_profile"
+    app:startDestination="@id/profileFragment">
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.hyk.navigationGrape.ui.tab.profile.ProfileFragment"
+        android:label="profile"
+        tools:layout="@layout/fragment_main_profile">
+
+        <action
+            android:id="@+id/action_main_to_sub"
+            app:destination="@id/mainSubFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/mainSubFragment"
+        android:name="com.hyk.navigationGrape.ui.tab.TempSubFragment"
+        android:label="mainSub"
+        tools:layout="@layout/fragment_main_sub">
+
+        <argument
+            android:name="title"
+            android:defaultValue=""
+            app:argType="string" />
+    </fragment>
+
+</navigation>

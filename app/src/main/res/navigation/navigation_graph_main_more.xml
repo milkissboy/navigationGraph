@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_more"
+    app:startDestination="@id/moreFragment">
+
+    <fragment
+        android:id="@+id/moreFragment"
+        android:name="com.hyk.navigationGrape.ui.tab.more.MoreFragment"
+        android:label="more"
+        tools:layout="@layout/fragment_main_more">
+
+        <action
+            android:id="@+id/action_main_to_sub"
+            app:destination="@id/mainSubFragment4"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/mainSubFragment4"
+        android:name="com.hyk.navigationGrape.ui.tab.TempSubFragment"
+        android:label="mainSub4"
+        tools:layout="@layout/fragment_main_sub">
+
+        <argument
+            android:name="title"
+            android:defaultValue=""
+            app:argType="string" />
+    </fragment>
+
+</navigation>

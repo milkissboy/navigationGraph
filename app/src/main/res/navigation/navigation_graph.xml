@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashFragment">
+
+    <include app:graph="@navigation/navigation_graph_login" />
+
+    <include app:graph="@navigation/navigation_graph_main" />
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.hyk.navigationGrape.ui.splash.SplashFragment"
+        android:label="splash"
+        tools:layout="@layout/fragment_splash">
+
+        <action
+            android:id="@+id/action_splash_to_main"
+            app:destination="@id/nav_graph_main"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true"/>
+
+        <action
+            android:id="@+id/action_splash_to_login"
+            app:destination="@id/loginFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true"/>
+
+        <action
+            android:id="@+id/action_splash_to_tutorial"
+            app:destination="@id/tutorialFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/tutorialFragment"
+        android:name="com.hyk.navigationGrape.ui.tutorial.TutorialFragment"
+        android:label="tutorial"
+        tools:layout="@layout/fragment_tutorial">
+
+        <action
+            android:id="@+id/action_tutorial_to_login"
+            app:destination="@id/nav_graph_login"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out"
+            app:popUpTo="@id/tutorialFragment"
+            app:popUpToInclusive="true" />
+
+        <action
+            android:id="@+id/action_tutorial_to_main"
+            app:destination="@id/nav_graph_main"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out"
+            app:defaultNavHost="true"
+            app:popUpTo="@id/tutorialFragment"
+            app:popUpToInclusive="true" />
+
+    </fragment>
+
+</navigation>

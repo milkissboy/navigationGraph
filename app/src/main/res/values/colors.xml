@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="transparent">#00000000</color>
+
+    <color name="black">#171718</color>
+    <color name="red_accent">#f32c34</color>
+    <color name="gray">#7a8492</color>
+    <color name="medium_gray">#dde1e8</color>
+    <color name="light_gray">#f5f6f8</color>
+    <color name="white">#ffffff</color>
+    <color name="line">#eeeeee</color>
+    <color name="sub_text">#7f7f84</color>
+    <color name="disable_text">#cdcdd2</color>
+    <color name="blue">#0091ff</color>
+    <color name="graph_orange">#ffb000</color>
+    <color name="graph_pink">#ed2d63</color>
+
+</resources>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_insight"
+    app:startDestination="@id/insightFragment">
+
+    <fragment
+        android:id="@+id/insightFragment"
+        android:name="com.hyk.navigationGrape.ui.tab.insight.InsightFragment"
+        android:label="insight"
+        tools:layout="@layout/fragment_main_insight">
+
+        <action
+            android:id="@+id/action_main_to_sub"
+            app:destination="@id/mainSubFragment2"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/mainSubFragment2"
+        android:name="com.hyk.navigationGrape.ui.tab.TempSubFragment"
+        android:label="mainSub2"
+        tools:layout="@layout/fragment_main_sub">
+
+        <argument
+            android:name="title"
+            android:defaultValue=""
+            app:argType="string" />
+    </fragment>
+
+</navigation>
